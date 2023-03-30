@@ -1,65 +1,72 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  .form-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-  
-  label {
-    font-size: 1.2rem;
-    margin-right: 1rem;
-  }
-  
-  input[type="text"] {
-    flex: 1;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-    border: none;
-    background-color: #28a745;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  #download-btn {
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-    border: none;
-    background-color: #28a745;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 1rem;
-  }
-  
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row; /* Cambiar la dirección del flex a row */
+  justify-content: center; /* Alinear los botones al centro del contenedor */
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+label {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-right: 1rem; /* Agregar un margen derecho al input para separarlo del botón de descargar */
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 0.5rem; /* Agregar un margen a los lados de los botones para separarlos del input */
+}
+
+#download-btn {
+  margin-left: 0; /* Quitamos el margen izquierdo que tenia anteriormente */
+}
+
+#qrcode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#qrcode img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
